@@ -1,0 +1,24 @@
+{
+    "serviceParameters": {
+        "serviceName": "SERVICE_NAME",
+        "serviceLevel": "PAAS",
+        "serviceDescription": "SERVICE_DESC",
+        "serviceVersion": "5.7",
+        "vmPublicKeyText": "SSH_KEY",
+        "vmUser": "opc",
+        "backupDestination": "BACKUP_TYPE",
+        "cloudStorageContainer": "SCS_CONTAINER",
+        "cloudStorageUser": "SCS_USER",
+        "cloudStoragePassword": "SCS_PWD"
+    },
+    "componentParameters": {
+        "mysql": {
+            "shape": "COMP_SHAPE",
+            "mysqlUserName": "MYSQL_USER",
+            "mysqlUserPassword": "MYSQL_PWD",
+            "dbName": "DB_NAME",
+            "dbStorage": "DB_STORAGE",
+            "mysqlCharset": "DB_CHARSET"
+        }
+    }
+}

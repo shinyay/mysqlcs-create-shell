@@ -1,0 +1,21 @@
+{
+    "serviceParameters": {
+        "serviceName": "SERVICE_NAME",
+        "serviceLevel": "PAAS",
+        "serviceDescription": "SERVICE_DESC",
+        "serviceVersion": "5.7",
+        "vmPublicKeyText": "SSH_KEY",
+        "vmUser": "opc",
+        "backupDestination": "NONE"
+    },
+    "componentParameters": {
+        "mysql": {
+            "shape": "oc3",
+            "mysqlUserName": "root",
+            "mysqlUserPassword": "MYSQL_PWD",
+            "dbName": "mydatabase",
+            "dbStorage": "25",
+            "mysqlCharset": "utf8mb4"
+        }
+    }
+}
