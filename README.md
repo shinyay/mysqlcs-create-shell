@@ -9,7 +9,7 @@ When you create your instance in the Cloud all you have to do is put necessary i
 
 ## Demo
 
-![MySQL Creation](images/mysql.gif)
+![MySQL Creation](docs/images/mysql.gif)
 
 ## Features
 
