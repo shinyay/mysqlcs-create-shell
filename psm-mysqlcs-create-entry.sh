@@ -1,9 +1,17 @@
 #!/bin/bash
 # usage
 cmdname=`basename $0`
-function usage()
-{
-  echo "Usage: ${cmdname} SERVICE-NAME MYSQL-PWD <DESCRIPTION>" 1>&2
+function usage() {
+cat << EOT
+Usage:
+  ${cmdname} SERVICE-NAME MYSQL-PWD [DESCRIPTION]
+
+Description:
+  SERVICE-NAME: MySQL CS Service Instance Name
+  MYSQL-PWD:    MySQL DB User(root) Password
+  DESCRIPTION:  MySQL CS Description
+EOT
+exit 1
 }
 
 # check arguments
