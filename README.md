@@ -1,6 +1,6 @@
 # Oracle MySQL Cloud Service Create Shell
 
-This is a instance creation shell for Oracle MySQL Cloud Service
+This is a instance creation shell for [Oracle MySQL Cloud Service](https://cloud.oracle.com/en_US/mysql)
 
 ## Description
 
@@ -23,14 +23,21 @@ When you create your instance in the Cloud all you have to do is put necessary i
 ## Usage
 
 - `Usage: psm-mysqlcs-create-entry.sh SERVICE-NAME MYSQL-PWD <DESCRIPTION>`
-  - **SERVICE-NAME**: Cloud Instance Name, not database name
-    - ※ Dataabse Name is hard-coded "`mydatabase`" as default name
+  - **SERVICE-NAME**: Cloud Instance Name, not schema name
+    - ※ Schema Name is hard-coded "`mydatabase`" as default name
   - **MYSQL-PWD**: MySQL User (root) Password
     - ※ Databse User name is hard-coded "`root`" as default user
 
 ## Installation
 
-- just git clone it
+- Deploy the shell and template json file like the following:
+
+```
+.
+├── psm-mysqlcs-create-entry.sh
+└── template
+    └── mysqlcs-entry-template.json
+```
 
 ## Licence
 
