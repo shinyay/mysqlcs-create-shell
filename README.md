@@ -9,11 +9,19 @@ When you create your instance in the Cloud all you have to do is put necessary i
 
 ## Demo
 
+### MySQL Creation
+
 ![MySQL Creation](docs/images/mysql.gif)
+
+### MySQL Enterprise Monitor
+
+![MySQL Enterprise Monitor](docs/images/mysql-em.gif)
 
 ## Features
 
 - Create MySQL instance
+  - Database only
+  - Database with Enterprise Monitor
 - Create JSON file for the instance
 
 ## Requirement
@@ -22,7 +30,10 @@ When you create your instance in the Cloud all you have to do is put necessary i
 
 ## Usage
 
-- `Usage: psm-mysqlcs-create-entry.sh SERVICE-NAME MYSQL-PWD <DESCRIPTION>`
+- `Usage: psm-mysqlcs-create-entry.sh [-t TEMPLATE] SERVICE-NAME MYSQL-PWD [DESCRIPTION]`
+  - **TEMPLATE**:
+    - 1: (DEFAULT) Just Database
+    - 2: Database with Enterprise Monitor
   - **SERVICE-NAME**: Cloud Instance Name, not schema name
     - ※ Schema Name is hard-coded "`mydatabase`" as default name
   - **MYSQL-PWD**: MySQL User (root) Password
@@ -36,7 +47,8 @@ When you create your instance in the Cloud all you have to do is put necessary i
 .
 ├── psm-mysqlcs-create-entry.sh
 └── template
-    └── mysqlcs-entry-template.json
+    ├── mysqlcs-entry-template.json
+    └── mysqlcs-entry-with-monitor-template.json
 ```
 
 ## Licence

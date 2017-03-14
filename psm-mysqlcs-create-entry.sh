@@ -4,7 +4,11 @@ cmdname=`basename $0`
 function usage() {
 cat << EOT
 Usage:
-  ${cmdname} SERVICE-NAME MYSQL-PWD [DESCRIPTION]
+  ${cmdname} [-t TEMPLATE] SERVICE-NAME MYSQL-PWD [DESCRIPTION]
+
+Template:
+1: (DEFAULT) Just Database
+2: Database with Enterprise Monitor
 
 Description:
   SERVICE-NAME: MySQL CS Service Instance Name
@@ -13,6 +17,21 @@ Description:
 EOT
 exit 1
 }
+
+# check options
+while getopts t: option
+do
+  case ${option} in
+    t)
+      TEMPLATE_OPT=${OPTARG}
+      ;;
+    *)
+      usage
+      exit 1
+      ;;
+  esac
+done
+shift $((OPTIND - 1))
 
 # check arguments
 if [ -z $1 ] || [ -z $2 ]; then
@@ -28,7 +47,11 @@ fi
 SERVICE_NAME=$1
 MYSQL_PWD=$2
 SSH_KEY="`cat ~/.ssh/id_rsa.pub`"
-TEMPLATE="template/mysqlcs-entry-template.json"
+case ${TEMPLATE_OPT} in
+  "1" ) TEMPLATE="template/mysqlcs-entry-template.json" ;;
+  "2" ) TEMPLATE="template/mysqlcs-entry-with-monitor-template.json" ;;
+  * ) TEMPLATE="template/mysqlcs-entry-template.json" ;;
+esac
 CURRENT_TIME=`date '+%y%m%d-%H%M%S'`
 
 if [ ! -e ./json ]; then mkdir json ; fi
