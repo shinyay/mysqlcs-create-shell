@@ -9,7 +9,13 @@ When you create your instance in the Cloud all you have to do is put necessary i
 
 ## Demo
 
+### MySQL Creation
+
 ![MySQL Creation](docs/images/mysql.gif)
+
+###1 MySQL Enterprise Monitor
+
+![MySQL Enterprise Monitor](docs/images/mysql-em.gif)
 
 ## Features
 
