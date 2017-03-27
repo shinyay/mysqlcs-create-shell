@@ -13,7 +13,7 @@ When you create your instance in the Cloud all you have to do is put necessary i
 
 ![MySQL Creation](docs/images/mysql.gif)
 
-###1 MySQL Enterprise Monitor
+### MySQL Enterprise Monitor
 
 ![MySQL Enterprise Monitor](docs/images/mysql-em.gif)
 
@@ -50,6 +50,11 @@ When you create your instance in the Cloud all you have to do is put necessary i
     ├── mysqlcs-entry-template.json
     └── mysqlcs-entry-with-monitor-template.json
 ```
+
+- Add SSH authorization to oracle user
+
+  - Copy from **/home/opc/.ssh/authorized_keys**
+  - to **/u01/app/oracle/tools/home/oracle/.ssh/authorized_keys**
 
 ## Licence
 
